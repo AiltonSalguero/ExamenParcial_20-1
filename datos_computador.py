@@ -13,7 +13,7 @@ import sysconfig
 class DatosComputador:
     @staticmethod
     def getArquitectura():
-        return platform.architecture()
+        return str(platform.architecture())
     @staticmethod
     def getIdSistemaOperativo():
         return str(platform.system())  + " " + str(platform.release())
@@ -30,9 +30,6 @@ class DatosComputador:
         hostname = socket.gethostname()
         return socket.gethostbyname(hostname)
     
-    @staticmethod
-    def getRam():
-        return str(round(psutil.virtual_memory().total / (1024.0 **3)))+" GB"
     
     @staticmethod
     def getDatosComputador():
